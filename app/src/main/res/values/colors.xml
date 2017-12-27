@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="ff92_text">#FF929292</color>
+    <color name="ff0c_bg">#FF0C0C0C</color>
+    <color name="ff2a_text">#FF2A1745</color>
+    <color name="ff00_text">#FF000000</color>
+    <color name="ff14_bt">#FF141414</color>
+    <color name="bg_white">#ffffffff</color>
+    <color name="live_buttom_text">#929292</color>
+    <color name="switch_btn_msg">#02f906</color>
+    <color name="line">#1D1D1D</color>
+    <color name="dialog_line">#E9E9E9</color>
+    <color name="dialog_bg">#FFFFFF</color>
+    <color name="dialog_text">#FF333333</color>
+    <color name="et_hint">#8E8E93</color>
+    <color name="bg_org">#F29E19</color>
+    <color name="select_hint">#FF454545</color>
+    <color name="select_text">#cccccc</color>
+    <color name="music_bar">#A61CE7</color>
+    <color name="ff1A1A">#ff1A1A1A</color>
+
+    <!--date-->
+    <color name="fffd_text">#FFFD5739</color>
+    <color name="font_white_one">#FFFFFF</color>
+    <color name="data_title">#F7F7F7</color>
+    <color name="gray_normal">#666667</color>
+
+    <color name="blue">#0383EE</color>
+</resources>
