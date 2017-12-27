@@ -36,7 +36,7 @@ import com.shing.blurstickytab.R;
  * Date: 2017-11-18
  * Description:  top 毛玻璃渐变 Tab 悬停：
  */
-public class GaussPager extends LinearLayout {
+public class BlurStickyView extends LinearLayout {
 
     private ViewGroup mTop;
     private View mNav;
@@ -71,7 +71,7 @@ public class GaussPager extends LinearLayout {
         }
     };
 
-    public GaussPager(Context context, AttributeSet attrs) {
+    public BlurStickyView(Context context, AttributeSet attrs) {
         super(context, attrs);
         setOrientation(LinearLayout.VERTICAL);
 
