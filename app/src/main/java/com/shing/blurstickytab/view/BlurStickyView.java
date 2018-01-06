@@ -1,4 +1,4 @@
-package com.shing.blurstickytab.utils;
+package com.shing.blurstickytab.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -16,6 +16,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
@@ -29,6 +30,7 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 
 import com.shing.blurstickytab.R;
+import com.shing.blurstickytab.utils.FastBlur;
 
 
 /**
@@ -188,12 +190,14 @@ public class BlurStickyView extends LinearLayout {
                         }
 
                         // 如果topView没有隐藏
-                        // 或sc的RecyclerView在顶部 && topView隐藏 && 下拉，则拦截
-//                        Log.i("+++++++++++",c.getTop()+"++++++"+isTopHidden+"++++++++++++"+dy);
+                        // 或sc的RecyclerView在顶部 && topView隐藏 && 下拉，则拦截  //如果返回true，事件不会传递到子View上
+                        Log.i("+++++++++++",(c != null)+"++++++"+c.getTop()+"++++++"+isTopHidden+"+++++++外面+++++"+dy);
                         if (!isTopHidden || //
                                 (c != null //
                                         && c.getTop() == 0//item设置距离的话这里要对应修改
                                         && isTopHidden && dy > 0)) {
+                            Log.i("+++++++++++",(c != null)+"++++++"+c.getTop()+"++++++"+isTopHidden+"+++++里面+++++++"+dy);
+
 
                             initVelocityTrackerIfNotExists();
                             mVelocityTracker.addMovement(ev);
@@ -237,6 +241,7 @@ public class BlurStickyView extends LinearLayout {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+
         //整个ViewGroup 整体的滚动
         initVelocityTrackerIfNotExists();
         mVelocityTracker.addMovement(event);
@@ -250,6 +255,7 @@ public class BlurStickyView extends LinearLayout {
                 mLastY = y;
                 return true;
             case MotionEvent.ACTION_MOVE:
+
                 float dy = y - mLastY;
 
 //                Log.e("TAG", "dy = " + dy + " , y = " + y + " , mLastY = " + mLastY);
@@ -257,12 +263,14 @@ public class BlurStickyView extends LinearLayout {
                 if (!mDragging && Math.abs(dy) > mTouchSlop) {
                     mDragging = true;
                 }
+                Log.i("++++++++++",getScrollY()+"+++++++++++ACTION_MOVE+++++"+dy);
                 if (mDragging) {
                     //核心滑动方法
                     scrollBy(0, (int) -dy);
                     // 如果topView隐藏，且上滑动时，则改变当前事件为ACTION_DOWN
                     // 处理手指一路下拉的情况
                     if (getScrollY() == mTopViewHeight && dy < 0) {
+
                         event.setAction(MotionEvent.ACTION_DOWN);
                         dispatchTouchEvent(event);
                         isInControl = false;

@@ -12,7 +12,7 @@ import java.lang.reflect.Field;
  * Name: TabLayoutUntil
  * Author: SNXJ
  * Date: 2017-12-19
- * Description:描述：
+ * Description:描述：Tablayout下画线
  */
 public class TabLayoutUtil {
     /**

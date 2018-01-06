@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:background="@color/colorPrimaryDark"
     android:layout_height="match_parent">
     <!--<android.support.v7.widget.RecyclerView-->
@@ -11,6 +12,12 @@
     <Button
         android:id="@+id/btn_blurSticky"
         android:text="悬停毛玻璃渐变"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/btn_scale_banner"
+        android:text="渐变banner"
         android:layout_width="match_parent"
         android:layout_height="50dp" />
 
