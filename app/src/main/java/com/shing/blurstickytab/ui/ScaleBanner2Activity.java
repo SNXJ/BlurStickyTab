@@ -11,10 +11,10 @@ import com.shing.blurstickytab.R;
 
 import com.shing.blurstickytab.adapter.RecyclerViewAdapter;
 
-import com.shing.blurstickytab.manager.AutoPlaySnapHelper;
-import com.shing.blurstickytab.manager.ScaleLayoutManager;
+import com.shing.scalelibrary.manager.AutoPlaySnapHelper;
+import com.shing.scalelibrary.manager.ScaleLayoutManager;
 
-import com.shing.blurstickytab.manager.ViewPagerLayoutManager;
+import com.shing.scalelibrary.manager.ViewPagerLayoutManager;
 import com.shing.blurstickytab.utils.LogUtils;
 import com.shing.blurstickytab.utils.ScreenUtil;
 

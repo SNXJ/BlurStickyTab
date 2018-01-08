@@ -1,4 +1,4 @@
-package com.shing.blurstickytab.manager;
+package com.shing.scalelibrary.manager;
 
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;

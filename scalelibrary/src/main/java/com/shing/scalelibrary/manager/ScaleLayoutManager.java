@@ -1,4 +1,4 @@
-package com.shing.blurstickytab.manager;
+package com.shing.scalelibrary.manager;
 
 import android.content.Context;
 import android.view.View;
