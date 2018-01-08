@@ -55,7 +55,7 @@ public class ScaleBannerActivity extends AppCompatActivity {
     }
 
     private void init() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 9; i++) {
             mList.add(R.mipmap.home_banner_1);
             mList.add(R.mipmap.home_banner_2);
             mList.add(R.mipmap.home_banner_3);

@@ -33,7 +33,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        mCardAdapterHelper.onBindViewHolder(holder.itemView, position, getItemCount());
+//        mCardAdapterHelper.onBindViewHolder(holder.itemView, position, getItemCount());
         holder.mImageView.setImageResource(mList.get(position));
         holder.mImageView.setOnClickListener(new View.OnClickListener() {
             @Override

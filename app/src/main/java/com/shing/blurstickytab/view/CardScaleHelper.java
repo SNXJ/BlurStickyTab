@@ -12,7 +12,6 @@ import com.shing.blurstickytab.utils.ScreenUtil;
  * Author: SNXJ
  * Date: 2018-1-5
  * Description:
- *
  */
 
 
@@ -21,11 +20,11 @@ public class CardScaleHelper {
     private Context mContext;
 
     private float mScale = 0.8f; // 两边视图scale
-    private int mPagePadding = 5; // 卡片的padding, 卡片间的距离等于2倍的mPagePadding
+    private int mPagePadding = 10; // 卡片的padding, 卡片间的距离等于2倍的mPagePadding
     private int mShowLeftCardWidth = 15;   // 左边卡片显示大小
 
     private int mCardWidth; // 卡片宽度
-    private int mOnePageWidth; // 滑动一页的距离
+   private int mOnePageWidth; // 滑动一页的距离
     private int mCardGalleryWidth;
 
     private int mCurrentItemPos;
@@ -71,8 +70,10 @@ public class CardScaleHelper {
         mRecyclerView.post(new Runnable() {
             @Override
             public void run() {
+
                 mCardGalleryWidth = mRecyclerView.getWidth();
                 mCardWidth = mCardGalleryWidth - ScreenUtil.dip2px(mContext, 2 * (mPagePadding + mShowLeftCardWidth));
+                LogUtils.i("====mCardWidth===", "=======" + mCardWidth);
                 mOnePageWidth = mCardWidth;
                 mRecyclerView.smoothScrollToPosition(mCurrentItemPos);
                 onScrolledChangedCallback();
@@ -104,7 +105,6 @@ public class CardScaleHelper {
         }
         if (pageChanged) {
             int tempPos = mCurrentItemPos;
-
             mCurrentItemPos = mCurrentItemOffset / mOnePageWidth;
             LogUtils.d(String.format("=======onCurrentItemPos Changed======= tempPos=%s, mCurrentItemPos=%s", tempPos, mCurrentItemPos));
         }

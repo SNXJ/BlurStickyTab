@@ -23,6 +23,7 @@
         <activity android:name=".FullscreenActivity" />
         <activity android:name=".ui.BlurStickyActivity" />
         <activity android:name=".ui.ScaleBannerActivity" />
+        <activity android:name=".ui.ScaleBanner2Activity" />
     </application>
 
 </manifest>

@@ -21,4 +21,10 @@
         android:layout_width="match_parent"
         android:layout_height="50dp" />
 
+    <Button
+        android:id="@+id/btn_scale_banner2"
+        android:text="渐变banner2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
 </LinearLayout>

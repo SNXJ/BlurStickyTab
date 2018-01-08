@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.shing.blurstickytab.ui.BlurStickyActivity;
+import com.shing.blurstickytab.ui.ScaleBanner2Activity;
 import com.shing.blurstickytab.ui.ScaleBannerActivity;
 
 import butterknife.BindView;
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnBlurSticky;
     @BindView(R.id.btn_scale_banner)
     Button btnScaleBanner;
+    @BindView(R.id.btn_scale_banner2)
+    Button btnScaleBanner2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, BlurStickyActivity.class));
+            }
+        });
+
+        btnScaleBanner2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ScaleBanner2Activity.class));
             }
         });
 
